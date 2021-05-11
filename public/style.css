@@ -1,0 +1,43 @@
+body {
+    font-family: "Serif", Garamond;
+    font-size: 22px;
+    text-align: center;
+    background-image: url("Perfume.jpeg");
+    background-attachment: scroll;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    padding-right: 120px;
+    padding-left: 120px;
+}
+h1{
+    font-family: "Serif", Garamond;
+    font-size: 50px;
+}
+.textdiv {
+    background-color: rgba(255, 255, 255, 0.308);
+    padding: 20px;
+    margin-bottom: 20px;
+}
+.multiple {
+    margin-left: auto;
+    margin-right:auto;
+    width: 400px;
+    text-align: justify;
+}
+input[type=text] {
+    background-color: rgba(255, 255, 255, 0.486);
+    width: 200px;
+    height: 1px;
+    padding: 12px;
+    border-radius: 25px;
+}
+input[type=submit] {
+    background-color: white;
+    font-family: "Serif", Times New Roman;
+    font-size: 27px;
+    text-align: center;
+    border-color: whitesmoke;
+    color: brown;
+    border-radius: 25px;
+    border-style: solid
+}

@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Perfumes</title>
+    <link href="../style.css" rel="stylesheet" type="text/css" />
+    <script
+            src="https://code.jquery.com/jquery-3.5.1.min.js"
+            integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0="
+            crossorigin="anonymous"></script>
+</head>
+<body>
+<h1> Survey for Perfume Collectors </h1>
+<form onsubmit="savePerfumeData(event)" id="perfume_form">
+    <div class="textdiv">
+        <strong><label for="duration"> For how long are you collecting Perfumes? <sup style="Color:red">*</sup> </label><br><br></strong>
+        <input type="text" id="duration" name="duration" > <br>
+    </div>
+    <div class="textdiv">
+        <strong><label for="reason"> What is the reason you collect Perfumes?</label><br><br></strong>
+        <input type="text" id="reason" name="reason"> <br>
+    </div>
+    <div class="textdiv">
+        <strong><label for="Favfragrance"> What is your favorite Frangrance? <sup style="Color:red">*</sup> </label><br><br></strong>
+        <input type="text" id="Favfragrance" name="favorite_fragrance" > <br>
+    </div>
+    <div class="textdiv">
+        <strong><label for="Brand"> What is your favorite Perfume Brand</label><br><br></strong>
+        <input type="text" id="Brand" name="brand" > <br>
+    </div>
+    <div class="textdiv">
+        <strong><label> What type of Fragrance you like the most?<sup style="Color:red">*</sup></label><br><br></strong>
+        <div class="multiple">
+            <input type="radio"  name="type" id="Floral" value="Floral" >
+            <label>Floral</label><br>
+            <input type="radio" name="type" id="Woody" value="Woody">
+            <label for="Woody"> Woody </label><br>
+            <input type="radio" name="type" id="Fresh"  value="Fresh">
+            <label>Fresh (e.g. Fruity, Green, Citrus, Water)</label><br>
+            <input type="radio" name="type" id="Oriental" value="Oriental">
+            <label>Oriental (e.g. Spicy, Vanilla)</label><br>
+        </div>
+    </div>
+    <div class="textdiv">
+        <strong><label> What attributes do you consider when choosing a perfume? <sup style="Color:red">*</sup> </label><br><br> </strong>
+        <div class="multiple">
+            <input type="checkbox" class="attribute1" id="Fragrance" name="attribute1" value="Fragrance">
+            <label for="Fragrance"> Fragrance </label><br>
+            <input type="checkbox" class="Brand" id="attribute2" name="attribute1" value="Brand">
+            <label for="Brand"> Brand </label><br>
+            <input type="checkbox" class="attribute1" id="Packaging & Design" name="attribute1" value="Packaging & Design"
+                   >
+            <label for="Packaging & Design"> Packaging & Design </label> <br>
+            <input type="checkbox" class="attribute1" id="attribute4" name="attribute1" value="Other"
+                   >
+            <label for="attribute5"> Other: </label>
+            <input type="text" class="attribute1" id="attribute5" name="attribute1"> <br>
+        </div>
+    </div>
+    <div class="textdiv">
+        <strong><label> Please, select your preference in perfumes <sup style="Color:red">*</sup></label><br><br></strong>
+        <div class="multiple" onclick="handlePreferenceCheck()">
+            <input type="radio" name="Preference" id="Niche" value="Niche Perfumes" >
+            <label for="Niche"> Niche Perfumes </label><br>
+            <input type="radio" name="Preference" id="Designer" value="Designer Perfumes">
+            <label for="Other"> Designer Perfumes </label><br>
+            <input type="radio" name="Preference" id="Other"  value="Other" >
+            <label>Other: </label>
+            <input type="text" name="Preference" id="otherPreference" disabled> <br>
+        </div>
+    </div>
+    <div class="textdiv">
+        <strong><label> What fragrances do you collect? <sup style="Color:red">*</sup></label><br><br></strong>
+        <div class="multiple" onclick="handleCollectionCheck()">
+            <input type="radio"  name="collection" id="Vintage" value="Vintage" >
+            <label>Vintage</label><br>
+            <input type="radio"  name="collection" id="Modern" value="Modern">
+            <label for="Modern"> Modern </label><br>
+            <input type="radio"  name="collection" id="Celebrity Perfume"  value="Celebrity Perfume">
+            <label> Celebrity Perfume </label><br>
+            <input type="radio"  name="collection" id="Other1" value="Other" />
+            <label> Other:</label>
+            <input type="text" name="collection" id="othercollection" disabled><br>
+        </div>
+    </div>
+    <div class="textdiv">
+        <strong><label for="FavoritePerfumes"> Please state your favorite Perfumes from your collection <sup style="Color:red">*</sup> </label><br><br></strong>
+        <input type="text" id="FavoritePerfumes" name="FavoritePerfumes" > <br>
+    </div>
+    <div class="textdiv">
+        <strong><label for="Add"> What Perfume are you currently looking for to add to your collection? </label><br><br></strong>
+        <input type="text" id="Add" name="Add"> <br> <br>
+    </div>
+    <button type="submit">Submit</button>
+</form>
+<script src="../script.js"></script>
+</body>
+</html>
